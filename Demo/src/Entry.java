@@ -1,4 +1,6 @@
+
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Entry
 {
@@ -24,6 +26,15 @@ set.add(p6);
 set.add(p7);
 set.add(p8);
 set.add(p9);
+
+Iterator<Person>  itr= set.iterator();
+while(itr.hasNext())
+{
+System.out.println(itr.next().getName());	
+}
+
+
 System.out.println(set.size());
+System.out.println(Person.count);
 }
 }

@@ -1,7 +1,9 @@
 
-public class Person extends Entry
+
+public class Person 
 {
 String name;
+static int count=0;
 public Person(String name)
 {
 	this.name = name;
@@ -21,12 +23,14 @@ public void setName(String name) {
 @Override
 	public int hashCode()
 {
-		
-		return this.getName().charAt(0);
-	
-	}
+		return super.hashCode();
+		//return this.getName().charAt(0);
+	//return this.getName().length();
+	//return 23;
+}
 @Override
 public boolean equals(Object obj) {
+	count++;
 	if (this.name == obj)
 		return true;
 	if (obj == null)
@@ -43,11 +47,3 @@ public boolean equals(Object obj) {
 	return true;
 }
 }
-
-
-
-
-
-
-
-
